@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Redirect</title>
+
+	<script>
+
+		function isOnline() {
+			document.getElementById("main").innerHTML = (navigator.onLine) ? 
+			"<h1>Redirecting...</h1>":
+			'<div class="error">Error: No internet access</div>';
+			return (navigator.onLine);
+		}
+
+		function display() {
+			var txt = "<br><br>";
+			txt += "<p>Browser CodeName: " + navigator.appCodeName + "</p>";
+			txt += "<p>Browser Name: " + navigator.appName + "</p>";
+			txt += "<p>Browser Version: " + navigator.appVersion + "</p>";
+			txt += "<p>Cookies Enabled: " + navigator.cookieEnabled + "</p>";
+			txt += "<p>Browser Language: " + navigator.language + "</p>";
+			txt += "<p>Platform: " + navigator.platform + "</p>";
+			txt += "<p>User-agent header: " + navigator.userAgent + "</p>";
+			document.getElementById("main").innerHTML =document.getElementById("main").innerHTML + txt;
+		}
+
+
+
+		function redirect() {
+			
+
+			var url = "https://www.google.com";
+			if(isOnline()) 
+				window.location.href = url;
+			else 
+				display();
+		}
+		window.onload = redirect;
+	</script>
+
+	<style>
+		body{
+			color: white;
+			background-color: black;
+			text-align: center;
+			font-family: monospace;
+		}
+		h1 {
+			font-size: 55px;
+		}
+		#main{
+			margin-top: 10%;
+			
+		}
+		.error {
+			color: red;
+			font-size: 35px;
+		}
+	</style>
+
+</head>
+<body>
+
+<div id="main">
+
+</div>
+
+
+</body>
+</html>

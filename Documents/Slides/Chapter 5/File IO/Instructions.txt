@@ -1,0 +1,14 @@
+Modify Savings Acct Demo Class
+to read and process deposits.txt,
+which represents the deposits
+made in one month.
+
+Modify Savings Acct Demo Class
+to read and process withdrawals.txt,
+which represents the withdrawals
+made in one month.
+
+
+Output results to a file entitled 
+results.txt assuming Start Balance of 
+$500 and annual interest rate of 4.3%.
